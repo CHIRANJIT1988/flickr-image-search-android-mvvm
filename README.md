@@ -5,7 +5,29 @@ FlickrImageSearch is as simple app used to search image's. The image thumbnails 
 
 # Developer's Note
 
-FlickrImageSearch is developer without using any third party library and the app is based on MVVM and Singleton design pattern.
+FlickrImageSearch is developer without using any third party library and the app is based on MVVM and Singleton design pattern. Below is the helper files short description.
+
+## Helper Files
+
+```
+HttpRequestTask.class - inside data package helps to fetch data from url using HttpURLConnection connection class and read stream using BufferedReader class.
+```
+
+```
+DownloadImageTask.class - inside data package helps to load bitmap data from url using HttpURLConnection connection class and decode input stream to bitmap.
+```
+
+```
+BitmapCache.class - inside data > utils package helps to cache bitmap which was loaded using HttpURLConnection and stored it to save network time and we can get bitmap from cache whenever required.
+```
+
+```
+JsonParser.class - inside data > utils package helps to parse flickr api response json data to FlickrApiResponse object.
+```
+
+```
+URLBuilder.class - inside data > utils package helps to build flickr api endpoint by concating page number and query string in BASE URL. It also helps to build image endpoint.
+```
 
 # Usage
 
